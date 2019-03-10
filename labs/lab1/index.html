@@ -15,7 +15,7 @@
 		}
 
 		h1 {
-			font: 40px/60px Roboto, sans-serif
+			font: 40px/60px -apple-system, system-ui, Lato, "Segoe UI", Verdana, Arial, sans-serif
 		}
 
 		body {
@@ -37,14 +37,14 @@
 
 		.grid {
 			display: grid;
-			grid-template-areas:
-					'nav nav nav nav nav nav'
-					'main main main main aside aside'
-					'footer footer footer footer footer footer';
 			grid-gap: 10px;
 			background-color: #f8f9fa;
 			padding: 10px;
 			margin: 20px 0;
+			grid-template-areas:
+					'nav nav nav nav nav nav'
+					'main main main main aside aside'
+					'footer footer footer footer footer footer';
 		}
 
 		nav { grid-area: nav; }
@@ -55,6 +55,17 @@
 		.menu {
 			list-style: none;
 		}
+
+		@media (max-width: 640px) {
+			.grid {
+				grid-template-areas:
+						'nav nav nav nav nav nav'
+						'main main main main main main'
+						'footer footer footer footer footer footer';
+			}
+			aside { display: none }
+		}
+
 	</style>
 </head>
 <body>
