@@ -1,0 +1,14 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:extg/web1920.git",
+  "author": "extg <extg@yandex-team.ru>",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "gh-pages -d labs"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
