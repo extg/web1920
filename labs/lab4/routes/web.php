@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $news = \App\News::all();
+
+    return view('news', ['news' => $news]);
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
