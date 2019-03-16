@@ -6,106 +6,178 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <style>
-    /* Reset */
-    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
-    *, *:before, *:after { box-sizing: border-box; }
-
-    *, body {
-      font: 20px/28px Roboto, sans-serif;
-    }
-
-    h1 {
-      font: 40px/60px Roboto, sans-serif
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    html,
-    body,
-    #root
-    {
-      height: 100%;
-    }
-
-    #root {
-      max-width: 960px;
-      margin: auto;
-    }
-
-    .wrapper {
-      margin: 20px auto;
-      background-color: #f8f9fa;
-      padding: 10px 15px;
-      width: 100%;
-    }
-
-    nav { grid-area: nav; }
-    main { grid-area: main; padding-right: 30px }
-    aside { grid-area: aside; }
-    footer { grid-area: footer; }
-
-    .menu {
-      list-style: none;
-    }
-
-
-    @media (max-width: 640px) {
-      aside { display: none }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 </head>
 <body>
-<div id="root">
-  <h1>Адаптивная вёрстка компоновки (wireframe) web-приложения</h1>
-  <p>
-    В решении должно быть минимум 4 блока (например: профиль, общая информация, друзья, стена),
-    которые определённым образом распределены по странице. Пользуясь медиа-запросом, нужно реализовать
-    адаптивную верстку. При маленьких размерах экрана блоки растягиваются или центруются.
-  </p>
-  <div class="wrapper">
-    <div class="row">
-      <div class="col-sm">
-        <ul class="menu">
-          <li>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <main class="col-sm">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </main>
-      <aside class="col-sm">
-        <ul>
-          <li><a href="javascript:">Turpis egestas pretium aenean pharetra. </a></li>
-          <li><a href="javascript:">A arcu cursus vitae congue mauris rhoncus aenean.</a></li>
-          <li><a href="javascript:">Lobortis mattis aliquam faucibus purus in massa tempor nec feugiat. </a></li>
-          <li><a href="javascript:">Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et.</a></li>
-          <li><a href="javascript:">Euismod quis viverra nibh cras pulvinar.</a></li>
-          <li><a href="javascript:">Sed blandit libero volutpat sed cras ornare arcu dui. </a></li>
-        </ul>
-      </aside>
-    </div>
-    <footer class="row">
-      <div class="col-sm">
-        Footer
-      </div>
-    </footer>
-  </div>
-</div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand py-2" href="#">
+      Лендос
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="position-relative overflow-hidden p-3 p-md-2 m-md-3 text-center">
+      <h1 class="display-4 font-weight-normal">Конструктор лендингов</h1>
+      <p>
+        Магазин готовых Landing Page с высокой конверсией ‐
+        LPgenerator Design Store!
+        Рабочий лендинг в течение часа без HTML и дизайнера!
+      </p>
+      <a class="btn btn-outline-secondary" href="#">Попробовать бесплатно</a>
+    </div>
+
+    <div class="row">
+      <div class="col-md col-xs-12 my-2">
+        <div class="card">
+          <img class="card-img-top" src="https://placeimg.com/640/480/any?a" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Сайт визитка</h5>
+            <p class="card-text">Одна страница и форма обратной связи</p>
+            <a href="#" class="btn btn-primary">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md col-xs-12">
+        <div class="card">
+          <img class="card-img-top" src="https://placeimg.com/640/480/any?a" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Ледос</h5>
+            <p class="card-text">Несколько страниц, навигация, форма обратной связи. Дизайн на основе шаблонов</p>
+            <a href="#" class="btn btn-primary">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md col-xs-12">
+        <div class="card">
+          <img class="card-img-top" src="https://placeimg.com/640/480/any?a" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Супер-лендос</h5>
+            <p class="card-text">Персональный дизайн и поддержка, подсчет конверсии и многое другое</p>
+            <a href="#" class="btn btn-primary">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <h2 class="my-2">Почему выбрать нас?</h2>
+
+    <br>
+
+    <div class="row no-gutters marketing">
+      <div class="col-lg-6">
+        <h4>Быстро!</h4>
+        <p>Выберите шаблон, заполните данные и готов</p>
+
+        <h4>Недорого</h4>
+        <p>Мы делаем просто, поэтому и недорого</p>
+      </div>
+
+      <div class="col-lg-6">
+        <h4>Персонализированно</h4>
+        <p>Каждый из шаблонов мы дорабатываем индивидульно</p>
+
+        <h4>Качественно</h4>
+        <p>Мы используем только проверенные решения поэтому все круто</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+
+        <br>
+        <br>
+        <h2 class="my-2">Оставьте заяку</h2>
+
+        <br>
+        <form>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Имя</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput2">Почта</label>
+            <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Чего желаете?</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary mb-2">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md">
+        Lorem
+        <small class="d-block mb-3 text-muted">© 2017-2019</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Cool stuff</a></li>
+          <li><a class="text-muted" href="#">Random feature</a></li>
+          <li><a class="text-muted" href="#">Team feature</a></li>
+          <li><a class="text-muted" href="#">Stuff for developers</a></li>
+          <li><a class="text-muted" href="#">Another one</a></li>
+          <li><a class="text-muted" href="#">Last time</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Resource</a></li>
+          <li><a class="text-muted" href="#">Resource name</a></li>
+          <li><a class="text-muted" href="#">Another resource</a></li>
+          <li><a class="text-muted" href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Business</a></li>
+          <li><a class="text-muted" href="#">Education</a></li>
+          <li><a class="text-muted" href="#">Government</a></li>
+          <li><a class="text-muted" href="#">Gaming</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Team</a></li>
+          <li><a class="text-muted" href="#">Locations</a></li>
+          <li><a class="text-muted" href="#">Privacy</a></li>
+          <li><a class="text-muted" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,2 +1,15 @@
 node_modules/
 *.log
+
+# labs/lab4/.gitignore
+/labs/lab4/node_modules
+/labs/lab4/public/hot
+/labs/lab4/public/storage
+/labs/lab4/storage/*.key
+/labs/lab4/vendor
+.env
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
