@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('news', ['news' => $news]);
 });
 
+Route::get('/posts/{post}', function (App\News $post) {
+    return view('post', ['post' => $post]);
+});
+
 Route::get('/add', function () {
     return view('add');
 });

@@ -6,9 +6,7 @@
         <div class="col-md-8">
             <h2>
                 Recent posts
-                <small>
-                    <a class="text-muted" href="/add">Add new</a>
-                </small>
+                <a href="/add" class="ce nr ags">Add new</a>
             </h2>
         </div>
     </div>
@@ -18,7 +16,7 @@
         <div class="col-md-8">
             <div class="card bg-dark">
                 <div class="card-header">
-                    <a href="{{ $post->slug }}">{{ $post->title }}</a>
+                    <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
                 </div>
 
                 <div class="card-body">
