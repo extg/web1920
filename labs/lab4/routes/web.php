@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 
 
 Route::get('/', function () {
-    $news = \App\News::all();
+    $news = \App\News::paginate(5);
 
     return view('news', ['news' => $news]);
 });
