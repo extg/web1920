@@ -16,7 +16,7 @@
     @foreach ($news as $post)
     <div class="row my-2">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card bg-dark">
                 <div class="card-header">
                     <a href="{{ $post->slug }}">{{ $post->title }}</a>
                 </div>
