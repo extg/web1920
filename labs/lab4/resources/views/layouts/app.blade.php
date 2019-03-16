@@ -20,6 +20,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <link href="https://bootstrap-themes.github.io/dashboard/assets/css/toolkit-inverse.css" rel="stylesheet">
+    <style>
+        .page-link {
+            background-color: #343a40!important;
+            border-color: #343a40!important;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
