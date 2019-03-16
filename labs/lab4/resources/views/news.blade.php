@@ -2,6 +2,17 @@
 
 @section('content')
 <div class="container">
+    <div class="row my-2">
+        <div class="col-md-8">
+            <h2>
+                Recent posts
+                <small>
+                    <a class="text-muted" href="/add">Add new</a>
+                </small>
+            </h2>
+        </div>
+    </div>
+
     @foreach ($news as $post)
     <div class="row my-2">
         <div class="col-md-8">
