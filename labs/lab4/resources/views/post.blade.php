@@ -12,6 +12,11 @@
                 <div class="card-body">
                     {{ $post->content }}
                 </div>
+
+                <div class="card-footer">
+                    <a href="/posts/{{ $post->id }}/delete" onclick="c()">Удалить</a>
+<!--                    <a  onclick="deletePostById({{ $post->id }})">Удалить</a>-->
+                </div>
             </div>
         </div>
     </div>

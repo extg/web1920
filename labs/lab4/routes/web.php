@@ -24,6 +24,12 @@ Route::get('/posts/{post}', function (App\News $post) {
     return view('post', ['post' => $post]);
 });
 
+Route::get('/posts/{postId}/delete', function ($postId) {
+    \App\News::destroy($postId);
+
+    return redirect('/');
+});
+
 Route::get('/add', function () {
     return view('add');
 });

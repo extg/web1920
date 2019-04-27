@@ -85,5 +85,29 @@
             @yield('content')
         </main>
     </div>
+
+    <script>
+        // $.ajaxSetup({
+        //     headers: {
+        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+        //     },
+        // });
+        function c(e) {
+            if (!confirm('Вы уверены?')) e.preventDefault();
+        }
+        function deletePostById(id) {
+            $.ajax({
+                url: `/posts/${id}`,
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                },
+                type: 'DELETE',
+                success: function(result) {
+                    alert('Deleted!')
+                    // Do something with the result
+                }
+            });
+        }
+    </script>
 </body>
 </html>
